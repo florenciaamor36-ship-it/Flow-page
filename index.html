@@ -1,0 +1,1103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0f0c29">
+  
+  <!-- SEO optimizado con keywords específicos -->
+  <meta name="description" content="StreamFlow Pro es la herramienta definitiva para vendedores de streaming en Latinoamérica. Administra más de 10.000 cuentas, automatiza ventas por WhatsApp y olvídate del caos. Prueba gratuita de 3 días.">
+  <meta name="keywords" content="gestión de streaming, vender cuentas de streaming, administrador de perfiles, Netflix, Disney Plus, HBO Max, WhatsApp automatizado, vendedores de streaming Latinoamérica, StreamFlow Pro, software de gestión de cuentas, herramienta para vendedores, administrar suscripciones, renovaciones automáticas, plantillas WhatsApp, métricas de ventas, proteger datos, Ley 11.723, Ley 25.326, Ley Federal de Protección de Datos México, Ley 1581 Colombia, GDPR, cumplimiento normativo">
+  <meta name="author" content="La Clave Argentina & Tienda SSH">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://streammanagerpro.vercel.app/">
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="StreamFlow Pro - Gestión profesional de streaming para Latinoamérica">
+  <meta property="og:description" content="Plataforma segura y conforme a la ley. Administrá más de 10.000 perfiles, automatizá WhatsApp y controlá tus métricas. Probá gratis.">
+  <meta property="og:image" content="https://streammanagerpro.vercel.app/og-image.png">
+  <meta property="og:url" content="https://streammanagerpro.vercel.app/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="StreamFlow Pro">
+  <meta property="og:locale" content="es_AR">
+  
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="StreamFlow Pro - Deja de improvisar, empieza a vender">
+  <meta name="twitter:description" content="Cumplí con la ley, protegé tus datos. Herramienta para vendedores de streaming en Latinoamérica con automatización WhatsApp y dashboard.">
+  <meta name="twitter:image" content="https://streammanagerpro.vercel.app/og-image.png">
+  
+  <title>StreamFlow Pro | Gestión profesional de streaming para Latinoamérica</title>
+  
+  <link rel="icon" type="image/png" href="logo-streamflow.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,600;14..32,700;14..32,800;14..32,900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- Schema.org para SEO técnico y legal -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "StreamFlow Pro",
+      "operatingSystem": "Web, Android, iOS",
+      "applicationCategory": "BusinessApplication",
+      "description": "Herramienta profesional para gestión de cuentas de streaming, automatización de WhatsApp y métricas en tiempo real para vendedores de Latinoamérica. Cumple con Ley 11.723, Ley 25.326, Ley Federal de Protección de Datos México, Ley 1581 Colombia y GDPR.",
+      "offers": {
+        "@type": "Offer",
+        "price": "10.00",
+        "priceCurrency": "USD",
+        "description": "Suscripción mensual - 3 días de prueba gratis"
+      },
+      "author": {
+        "@type": "Organization",
+        "name": "La Clave Argentina & Tienda SSH",
+        "url": "https://streammanagerpro.vercel.app",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Buenos Aires",
+          "addressCountry": "AR"
+        },
+        "areaServed": {
+          "@type": "Continent",
+          "name": "Latin America"
+        }
+      }
+    }
+  </script>
+
+  <style>
+    * { margin:0; padding:0; box-sizing:border-box; }
+    html { scroll-behavior:smooth; font-size:16px; }
+    body {
+      font-family:'Inter',system-ui,sans-serif;
+      background:#0f0c29;
+      color:#fff;
+      overflow-x:hidden;
+      line-height:1.6;
+      -webkit-font-smoothing:antialiased;
+    }
+    a { text-decoration:none; color:inherit; }
+    img { display:block; max-width:100%; }
+    .container { max-width:1200px; margin:0 auto; padding:0 1.5rem; }
+
+    /* ========== HEADER ========== */
+    .navbar {
+      position:fixed;
+      top:0; left:0; right:0;
+      background:rgba(15,12,41,0.92);
+      backdrop-filter:blur(12px);
+      z-index:1000;
+      padding:0.9rem 1.5rem;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      border-bottom:1px solid rgba(255,255,255,0.05);
+    }
+    .nav-logo { display:flex; align-items:center; gap:0.5rem; }
+    .nav-logo img { width:38px; height:38px; border-radius:10px; }
+    .nav-logo span {
+      font-weight:700;
+      font-size:1.1rem;
+      background:linear-gradient(135deg,#f5af19,#f12711);
+      -webkit-background-clip:text;
+      -webkit-text-fill-color:transparent;
+      background-clip:text;
+    }
+    .nav-actions { display:flex; align-items:center; gap:0.8rem; flex-wrap:wrap; }
+    .btn-sm {
+      padding:0.45rem 1.1rem;
+      border-radius:2rem;
+      font-weight:600;
+      font-size:0.75rem;
+      cursor:pointer;
+      transition:all 0.3s;
+      border:none;
+      display:inline-flex;
+      align-items:center;
+      gap:0.3rem;
+    }
+    .btn-primary-sm {
+      background:linear-gradient(145deg,#f5af19,#f12711);
+      color:#fff;
+    }
+    .btn-primary-sm:hover { transform:translateY(-1px); box-shadow:0 4px 12px rgba(245,175,25,0.4); }
+    .btn-outline-sm {
+      background:transparent;
+      border:1.5px solid rgba(255,255,255,0.25);
+      color:#fff;
+    }
+    .btn-outline-sm:hover { background:rgba(255,255,255,0.08); }
+
+    /* ========== MODALES ========== */
+    .modal-overlay {
+      display:none;
+      position:fixed;
+      top:0; left:0; right:0; bottom:0;
+      background:rgba(0,0,0,0.8);
+      backdrop-filter:blur(8px);
+      z-index:9999;
+      align-items:center;
+      justify-content:center;
+      padding:1.5rem;
+    }
+    .modal-overlay.active { display:flex; }
+    .modal-content {
+      background:linear-gradient(160deg,#1a154b,#0f0c29);
+      border:1px solid rgba(255,255,255,0.15);
+      border-radius:2rem;
+      padding:2.5rem;
+      max-width:800px;
+      width:100%;
+      max-height:85vh;
+      overflow-y:auto;
+      position:relative;
+      animation:modalFade 0.25s ease;
+    }
+    @keyframes modalFade {
+      from { opacity:0; transform:scale(0.95) translateY(20px); }
+      to { opacity:1; transform:scale(1) translateY(0); }
+    }
+    .modal-close {
+      position:absolute;
+      top:1rem; right:1.2rem;
+      background:rgba(255,255,255,0.1);
+      border:none;
+      width:36px; height:36px;
+      border-radius:50%;
+      color:#fff;
+      font-size:1.2rem;
+      cursor:pointer;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      transition:background 0.3s;
+    }
+    .modal-close:hover { background:rgba(255,255,255,0.2); }
+    .modal-content h2 {
+      font-size:1.8rem;
+      margin-bottom:1.5rem;
+      background:linear-gradient(135deg,#f5af19,#f12711);
+      -webkit-background-clip:text;
+      -webkit-text-fill-color:transparent;
+      background-clip:text;
+    }
+    .modal-content h3 { font-size:1.2rem; margin:1.5rem 0 0.5rem; color:#f5af19; }
+    .modal-content ul { padding-left:1.5rem; margin:0.8rem 0; }
+    .modal-content ul li { margin-bottom:0.4rem; opacity:0.9; }
+
+    /* ========== HERO ========== */
+    .hero {
+      position:relative;
+      min-height:100vh;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+      padding:7rem 0 4rem;
+      background: radial-gradient(ellipse at 20% 50%, rgba(48,43,99,0.9) 0%, transparent 60%),
+                  radial-gradient(ellipse at 80% 20%, rgba(36,36,62,0.95) 0%, transparent 50%);
+    }
+    .hero::before {
+      content:'';
+      position:absolute;
+      top:0;left:0;right:0;bottom:0;
+      background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23f5af19' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    }
+    .hero-container {
+      max-width:1200px;
+      width:90%;
+      margin:0 auto;
+      display:flex;
+      flex-wrap:wrap;
+      align-items:center;
+      justify-content:space-between;
+      position:relative;
+      z-index:2;
+    }
+    .hero-text { flex:1 1 500px; padding-right:2rem; }
+    .hero-logo { display:flex; align-items:center; gap:0.8rem; margin-bottom:1.5rem; }
+    .hero-logo img { width:55px; height:55px; border-radius:14px; }
+    .hero-logo span {
+      font-size:1.3rem;
+      font-weight:700;
+      background:linear-gradient(135deg,#f5af19,#f12711);
+      -webkit-background-clip:text;
+      -webkit-text-fill-color:transparent;
+      background-clip:text;
+    }
+    .hero-text h1 {
+      font-size:clamp(2.2rem, 5vw, 3.6rem);
+      font-weight:900;
+      line-height:1.15;
+      letter-spacing:-0.02em;
+      margin-bottom:1rem;
+    }
+    .hero-text h1 .gradient-text {
+      background:linear-gradient(135deg,#f5af19,#f12711);
+      -webkit-background-clip:text;
+      -webkit-text-fill-color:transparent;
+      background-clip:text;
+    }
+    .hero-text .subheadline {
+      font-size:1.25rem;
+      font-weight:600;
+      color:#f5af19;
+      margin-bottom:0.5rem;
+    }
+    .hero-text p {
+      font-size:1.1rem;
+      opacity:0.9;
+      margin-bottom:2rem;
+      max-width:500px;
+    }
+    .hero-cta { display:flex; flex-wrap:wrap; gap:1rem; margin-bottom:2rem; }
+    .btn {
+      display:inline-flex;
+      align-items:center;
+      gap:0.5rem;
+      padding:0.85rem 2rem;
+      border-radius:3rem;
+      font-weight:700;
+      font-size:0.95rem;
+      transition:all 0.3s ease;
+      cursor:pointer;
+      border:none;
+    }
+    .btn-primary {
+      background:linear-gradient(145deg,#f5af19,#f12711);
+      color:#fff;
+      box-shadow:0 8px 20px rgba(245,175,25,0.35);
+    }
+    .btn-primary:hover { transform:translateY(-3px); box-shadow:0 12px 28px rgba(245,175,25,0.5); }
+    .btn-outline {
+      background:transparent;
+      border:2px solid #f5af19;
+      color:#f5af19;
+    }
+    .btn-outline:hover { background:rgba(245,175,25,0.1); transform:translateY(-3px); }
+    .btn-webapp {
+      background:transparent;
+      border:2px solid #34d399;
+      color:#34d399;
+    }
+    .btn-webapp:hover { background:rgba(52,211,153,0.1); transform:translateY(-3px); }
+    .hero-mockup {
+      flex:1 1 380px;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      position:relative;
+    }
+    .mockup-frame {
+      background:#1a1a3e;
+      border:3px solid rgba(255,255,255,0.15);
+      border-radius:2.5rem;
+      padding:0.7rem;
+      box-shadow:0 35px 60px rgba(0,0,0,0.7);
+      max-width:300px;
+      width:100%;
+    }
+    .mockup-frame .screen {
+      background:#0f0c29;
+      border-radius:2rem;
+      overflow:hidden;
+    }
+    .mockup-frame .screen img { border-radius:2rem; width:100%; display:block; }
+    .hero-badge {
+      position:absolute;
+      background:rgba(15,12,41,0.9);
+      backdrop-filter:blur(12px);
+      border-radius:2rem;
+      padding:0.4rem 1rem;
+      font-size:0.75rem;
+      font-weight:600;
+      border:1px solid rgba(255,255,255,0.2);
+      display:flex;
+      align-items:center;
+      gap:0.4rem;
+      z-index:3;
+    }
+    .badge-top { top:5%; right:5%; }
+    .badge-bottom { bottom:8%; left:5%; }
+
+    /* ========== SECCIONES COMUNES ========== */
+    .section { padding:4.5rem 0; }
+    .section-header { text-align:center; margin-bottom:3rem; }
+    .section-header h2 {
+      font-size:clamp(1.8rem, 4vw, 2.6rem);
+      font-weight:800;
+      margin-bottom:0.5rem;
+    }
+    .section-header h2 .gradient-text {
+      background:linear-gradient(135deg,#f5af19,#f12711);
+      -webkit-background-clip:text;
+      -webkit-text-fill-color:transparent;
+      background-clip:text;
+    }
+    .section-header p { opacity:0.8; max-width:600px; margin:0 auto; font-size:1rem; }
+
+    .two-column {
+      display:flex;
+      flex-wrap:wrap;
+      gap:3rem;
+      align-items:flex-start;
+      justify-content:center;
+    }
+    .two-column > div { flex:1 1 300px; }
+
+    .pain-list { list-style:none; margin:1.5rem 0; }
+    .pain-list li {
+      padding:0.9rem 0;
+      border-bottom:1px solid rgba(255,255,255,0.05);
+      display:flex;
+      align-items:flex-start;
+      gap:0.8rem;
+      font-size:1rem;
+    }
+    .pain-list li i { font-size:1.2rem; margin-top:0.15rem; flex-shrink:0; }
+    .pain-list li i.fa-times-circle { color:#f12711; }
+    .pain-list li i.fa-check-circle { color:#34d399; }
+
+    /* ========== VENTAJAS COMPETITIVAS ========== */
+    .advantage-grid {
+      display:grid;
+      grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));
+      gap:2rem;
+      margin-top:2rem;
+    }
+    .advantage-card {
+      background:rgba(255,255,255,0.03);
+      border:1px solid rgba(255,255,255,0.06);
+      border-radius:1.5rem;
+      padding:2rem;
+      transition:all 0.3s;
+    }
+    .advantage-card:hover {
+      border-color:rgba(245,175,25,0.3);
+      transform:translateY(-5px);
+    }
+    .advantage-card h3 {
+      font-size:1.2rem;
+      margin-bottom:0.8rem;
+      color:#f5af19;
+      display:flex;
+      align-items:center;
+      gap:0.5rem;
+    }
+    .advantage-card p { opacity:0.85; font-size:0.95rem; }
+
+    /* ========== CARACTERÍSTICAS ========== */
+    .features-grid {
+      display:grid;
+      grid-template-columns:repeat(auto-fit, minmax(260px, 1fr));
+      gap:2rem;
+    }
+    .feature-card {
+      background:rgba(255,255,255,0.03);
+      border:1px solid rgba(255,255,255,0.08);
+      border-radius:1.5rem;
+      padding:2rem;
+      text-align:center;
+      backdrop-filter:blur(8px);
+      transition:transform 0.3s, box-shadow 0.3s;
+    }
+    .feature-card:hover {
+      transform:translateY(-8px);
+      box-shadow:0 20px 40px rgba(245,175,25,0.15);
+      border-color:rgba(245,175,25,0.3);
+    }
+    .feature-icon {
+      width:65px; height:65px;
+      margin:0 auto 1.2rem;
+      background:linear-gradient(135deg,#f5af19,#f12711);
+      border-radius:1.5rem;
+      display:flex; align-items:center; justify-content:center;
+      font-size:1.7rem; color:#fff;
+    }
+    .feature-card h3 { font-size:1.25rem; margin-bottom:0.5rem; }
+    .feature-card p { opacity:0.8; font-size:0.9rem; }
+
+    /* ========== TABLA COMPARATIVA ========== */
+    .comparison-table {
+      width:100%;
+      border-collapse:collapse;
+      margin:2rem 0;
+      font-size:0.9rem;
+      overflow-x:auto;
+    }
+    .comparison-table th, .comparison-table td {
+      padding:1rem;
+      text-align:center;
+      border-bottom:1px solid rgba(255,255,255,0.08);
+    }
+    .comparison-table th { background:rgba(245,175,25,0.1); font-weight:700; }
+    .comparison-table td i.fa-check { color:#34d399; }
+    .comparison-table td i.fa-times { color:#f12711; }
+
+    /* ========== LEGAL / PROTECCIÓN ========== */
+    .legal-badge-section {
+      display:flex;
+      flex-wrap:wrap;
+      justify-content:center;
+      gap:2rem;
+      margin-top:2rem;
+      text-align:center;
+    }
+    .legal-badge-item {
+      background:rgba(255,255,255,0.05);
+      border-radius:1rem;
+      padding:1rem 1.5rem;
+      font-size:0.85rem;
+      display:flex;
+      align-items:center;
+      gap:0.6rem;
+    }
+    .legal-badge-item i { color:#34d399; }
+
+    /* ========== PRECIOS ========== */
+    .pricing-wrapper { display:flex; justify-content:center; margin-top:2rem; }
+    .pricing-card {
+      background:linear-gradient(160deg,#1a154b,#0f0c29);
+      border:2px solid #f5af19;
+      border-radius:2.5rem;
+      padding:2.5rem;
+      max-width:420px;
+      width:100%;
+      text-align:center;
+      position:relative;
+      box-shadow:0 30px 50px rgba(0,0,0,0.5);
+    }
+    .pricing-card .discount-badge {
+      position:absolute;
+      top:-15px; right:-15px;
+      background:#f12711;
+      color:#fff;
+      padding:0.4rem 1.2rem;
+      border-radius:2rem;
+      font-weight:800;
+      font-size:0.8rem;
+    }
+    .pricing-card h3 { font-size:1.8rem; color:#f5af19; margin-bottom:0.5rem; }
+    .pricing-card .price {
+      font-size:4rem;
+      font-weight:900;
+      background:linear-gradient(135deg,#f5af19,#f12711);
+      -webkit-background-clip:text;
+      -webkit-text-fill-color:transparent;
+      background-clip:text;
+      margin:0.5rem 0;
+    }
+    .pricing-card .price small { font-size:1.2rem; }
+    .pricing-card ul { list-style:none; text-align:left; margin:2rem 0; }
+    .pricing-card ul li {
+      padding:0.7rem 0;
+      border-bottom:1px solid rgba(255,255,255,0.05);
+      font-size:0.95rem;
+    }
+    .pricing-card ul li i.fa-check-circle { color:#34d399; margin-right:0.6rem; }
+
+    /* ========== CASOS DE USO ========== */
+    .cases-grid {
+      display:grid;
+      grid-template-columns:repeat(auto-fit, minmax(250px, 1fr));
+      gap:2rem;
+      margin-top:2rem;
+    }
+    .case-card {
+      background:rgba(255,255,255,0.03);
+      border:1px solid rgba(255,255,255,0.08);
+      border-radius:1.5rem;
+      padding:2rem;
+      backdrop-filter:blur(8px);
+      text-align:center;
+    }
+    .case-card .case-icon {
+      font-size:2.3rem;
+      margin-bottom:1rem;
+      background:linear-gradient(135deg,#f5af19,#f12711);
+      -webkit-background-clip:text;
+      -webkit-text-fill-color:transparent;
+      background-clip:text;
+    }
+    .case-card h3 { font-size:1.2rem; margin-bottom:0.5rem; }
+    .case-card p { opacity:0.8; font-size:0.9rem; }
+
+    /* ========== CTA FINAL ========== */
+    .cta-section {
+      background:linear-gradient(135deg,#f5af19,#f12711);
+      padding:4rem 0;
+      text-align:center;
+    }
+    .cta-section h2 { font-size:clamp(1.8rem,4vw,2.4rem); font-weight:800; margin-bottom:1rem; color:#fff; }
+    .cta-section .btn { background:#0f0c29; color:#fff; font-size:1rem; margin-top:1.5rem; }
+    .cta-section .btn:hover { background:#1a1a3e; }
+
+    /* ========== FOOTER ========== */
+    .footer {
+      padding:2.5rem 1.5rem;
+      text-align:center;
+      border-top:1px solid rgba(255,255,255,0.1);
+      font-size:0.8rem;
+      opacity:0.7;
+    }
+    .footer a { color:#f5af19; text-decoration:underline; cursor:pointer; }
+    .footer strong { color:#f5af19; }
+
+    /* ========== BOTÓN FLOTANTE WHATSAPP ========== */
+    .whatsapp-float {
+      position:fixed;
+      bottom:25px;
+      right:25px;
+      background:#25D366;
+      color:#fff;
+      width:60px;
+      height:60px;
+      border-radius:50%;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-size:1.8rem;
+      box-shadow:0 8px 20px rgba(0,0,0,0.4);
+      z-index:998;
+      transition:transform 0.3s;
+    }
+    .whatsapp-float:hover { transform:scale(1.1); }
+
+    /* ========== ANIMACIONES ========== */
+    @keyframes fadeInUp {
+      from { opacity:0; transform:translateY(30px); }
+      to { opacity:1; transform:translateY(0); }
+    }
+    .animate { animation:fadeInUp 0.7s ease both; }
+    .delay-1 { animation-delay:0.1s; }
+    .delay-2 { animation-delay:0.2s; }
+    .delay-3 { animation-delay:0.3s; }
+
+    /* ========== RESPONSIVE ========== */
+    @media (max-width:768px) {
+      .hero-container { flex-direction:column; text-align:center; }
+      .hero-text { padding-right:0; }
+      .hero-cta { justify-content:center; }
+      .badge-top, .badge-bottom { display:none; }
+      .hero-logo { justify-content:center; }
+      .navbar { padding:0.7rem 1rem; }
+      .two-column { gap:1.5rem; }
+      .comparison-table { font-size:0.8rem; }
+    }
+    @media (max-width:480px) {
+      html { font-size:14px; }
+      .btn { padding:0.7rem 1.5rem; }
+    }
+    /* Escritorio: mejor aprovechamiento del espacio */
+    @media (min-width:1024px) {
+      .features-grid, .advantage-grid {
+        grid-template-columns:repeat(4, 1fr);
+      }
+      .cases-grid {
+        grid-template-columns:repeat(3, 1fr);
+      }
+      .hero-container {
+        align-items:center;
+      }
+      .hero-text {
+        flex:1 1 600px;
+        padding-right:4rem;
+      }
+      .hero-mockup {
+        flex:1 1 400px;
+      }
+      .legal-badge-section {
+        gap:3rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <nav class="navbar">
+    <div class="nav-logo">
+      <img src="logo-streamflow.png" alt="StreamFlow Pro">
+      <span>StreamFlow Pro</span>
+    </div>
+    <div class="nav-actions">
+      <a href="/app/" class="btn-sm btn-primary-sm"><i class="fas fa-desktop"></i> Versión Web</a>
+      <button class="btn-sm btn-outline-sm" onclick="abrirModal('modalQuienes')"><i class="fas fa-users"></i> Quiénes somos</button>
+    </div>
+  </nav>
+
+  <!-- HERO PRINCIPAL -->
+  <section class="hero">
+    <div class="hero-container">
+      <div class="hero-text animate">
+        <div class="hero-logo">
+          <img src="logo-streamflow.png" alt="StreamFlow Pro">
+          <span>StreamFlow Pro</span>
+        </div>
+        <p class="subheadline">🔥 PARA VENDEDORES DE STREAMING DE LATINOAMÉRICA</p>
+        <h1>Deja de <span class="gradient-text">improvisar</span>, empieza a <span class="gradient-text">vender</span></h1>
+        <p>La única plataforma que organiza tu cartera de clientes, automatiza los mensajes de WhatsApp y te muestra las métricas que importan. <strong>Sin planillas, sin caos, sin olvidos.</strong></p>
+        <div class="hero-cta">
+          <a href="/app/" class="btn btn-primary"><i class="fas fa-rocket"></i> Probar ahora gratis</a>
+          <a href="https://wa.me/5492291530515" target="_blank" class="btn btn-outline"><i class="fab fa-whatsapp"></i> Hablar con ventas</a>
+          <a href="/app/" class="btn btn-webapp"><i class="fas fa-laptop"></i> Versión web</a>
+        </div>
+      </div>
+      <div class="hero-mockup animate delay-1">
+        <div class="mockup-frame">
+          <div class="screen">
+            <img src="screenshot-dashboard.png" alt="Dashboard de StreamFlow Pro">
+          </div>
+        </div>
+        <div class="hero-badge badge-top"><i class="fas fa-shield-alt"></i> Seguro</div>
+        <div class="hero-badge badge-bottom"><i class="fas fa-sync-alt"></i> Sincronizado en la nube</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECCIÓN: EL PROBLEMA -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header animate">
+        <h2>¿Tu negocio de streaming sigue siendo un <span class="gradient-text">caos</span>?</h2>
+        <p>Si alguna de estas situaciones te resulta familiar, StreamFlow Pro es justo lo que necesitás.</p>
+      </div>
+      <div class="two-column animate delay-1">
+        <div>
+          <ul class="pain-list">
+            <li><i class="fas fa-times-circle"></i> <strong>Planillas interminables</strong> que se desactualizan y te hacen perder tiempo valioso.</li>
+            <li><i class="fas fa-times-circle"></i> <strong>Vencimientos olvidados</strong> que te dejan mal con el cliente y te hacen perder plata.</li>
+            <li><i class="fas fa-times-circle"></i> <strong>Mensajes de WhatsApp copiados y pegados</strong> uno por uno, con errores y cero profesionalismo.</li>
+            <li><i class="fas fa-times-circle"></i> <strong>No saber cuánto estás ganando</strong> realmente ni cuáles son tus cuentas más rentables.</li>
+          </ul>
+        </div>
+        <div>
+          <ul class="pain-list">
+            <li><i class="fas fa-check-circle"></i> <strong>Un solo panel</strong> donde ver TODO de un vistazo. Nada de buscar entre archivos.</li>
+            <li><i class="fas fa-check-circle"></i> <strong>Alertas automáticas</strong> de vencimiento para que no se te escape ninguna renovación.</li>
+            <li><i class="fas fa-check-circle"></i> <strong>Plantillas profesionales</strong> que se envían con un clic a WhatsApp cliente y proveedor.</li>
+            <li><i class="fas fa-check-circle"></i> <strong>Dashboard de ganancias</strong> actualizado en tiempo real. Sabés exactamente cuánto facturás.</li>
+          </ul>
+        </div>
+      </div>
+      <p style="text-align:center; margin-top:2rem; font-size:1.1rem; font-weight:600;">StreamFlow Pro <span class="gradient-text">elimina el caos</span> y te convierte en un vendedor profesional.</p>
+    </div>
+  </section>
+
+  <!-- SECCIÓN: ¿POR QUÉ ELEGIR STREAMFLOW PRO? -->
+  <section class="section" style="padding-top:2rem;">
+    <div class="container">
+      <div class="section-header animate">
+        <h2>¿Por qué <span class="gradient-text">StreamFlow Pro</span> es la mejor decisión para tu negocio?</h2>
+        <p>No somos una simple app de notas. Somos la herramienta que transforma tu manera de vender.</p>
+      </div>
+      <div class="advantage-grid animate delay-1">
+        <div class="advantage-card">
+          <h3><i class="fas fa-bolt"></i> Automatización real</h3>
+          <p>Nosotros generamos la plantilla, la enviamos a WhatsApp y copiamos los datos. Vos solo hacés clic. Ganá horas por día.</p>
+        </div>
+        <div class="advantage-card">
+          <h3><i class="fas fa-fingerprint"></i> Diseñado por vendedores</h3>
+          <p>Cada función nace de problemas reales que nosotros mismos padecimos. Por eso StreamFlow Pro es tan práctico y directo.</p>
+        </div>
+        <div class="advantage-card">
+          <h3><i class="fas fa-shield-haltered"></i> Privacidad total</h3>
+          <p>Infraestructura privada, cifrado de extremo a extremo. Nadie ve tus contraseñas ni tu información. Ni siquiera nosotros.</p>
+        </div>
+        <div class="advantage-card">
+          <h3><i class="fas fa-expand-arrows-alt"></i> Escalabilidad infinita</h3>
+          <p>Más de 10.000 perfiles sin ralentizaciones. Crecé sin límites, la app responde igual de rápido siempre.</p>
+        </div>
+        <div class="advantage-card">
+          <h3><i class="fas fa-hand-holding-usd"></i> Precio justo y fijo</h3>
+          <p>$10 USD al mes, sin sorpresas. Sin permanencia forzosa, pagás solo cuando lo necesitás.</p>
+        </div>
+        <div class="advantage-card">
+          <h3><i class="fas fa-headset"></i> Soporte humano real</h3>
+          <p>Escribinos por WhatsApp y te respondemos al instante. Nada de bots ni formularios eternos.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECCIÓN: CARACTERÍSTICAS DESTACADAS -->
+  <section class="section" style="padding-top:2rem;">
+    <div class="container">
+      <div class="section-header animate">
+        <h2>Todo lo que <span class="gradient-text">podés hacer</span> con StreamFlow Pro</h2>
+        <p>Funciones diseñadas para que trabajes más rápido, más seguro y más profesional.</p>
+      </div>
+      <div class="features-grid">
+        <div class="feature-card animate delay-1">
+          <div class="feature-icon"><i class="fas fa-layer-group"></i></div>
+          <h3>Gestión masiva ilimitada</h3>
+          <p>Administrá más de 10.000 perfiles de Netflix, Disney+, HBO Max, Prime Video, Paramount, Crunchyroll, Spotify y más. Filtros avanzados por plataforma, proveedor y estado.</p>
+        </div>
+        <div class="feature-card animate delay-1">
+          <div class="feature-icon"><i class="fas fa-bell"></i></div>
+          <h3>Alertas inteligentes de vencimiento</h3>
+          <p>Configurá los días de anticipación. Al abrir la app, ves instantáneamente los que están por vencer o ya vencidos. Nunca más un cliente descontento.</p>
+        </div>
+        <div class="feature-card animate delay-2">
+          <div class="feature-icon"><i class="fas fa-robot"></i></div>
+          <h3>Plantillas WhatsApp automatizadas</h3>
+          <p>Con un clic, la app genera un mensaje profesional con datos, reglas de uso, garantía y contacto de soporte. Se abre WhatsApp solo. Olvidate del copy‑paste.</p>
+        </div>
+        <div class="feature-card animate delay-2">
+          <div class="feature-icon"><i class="fas fa-chart-pie"></i></div>
+          <h3>Dashboard financiero</h3>
+          <p>Visualizá en tiempo real: ventas del día, total facturado, perfiles libres, combinaciones más rentables. Tomá decisiones basadas en datos, no en intuición.</p>
+        </div>
+        <div class="feature-card animate delay-3">
+          <div class="feature-icon"><i class="fas fa-cloud-upload-alt"></i></div>
+          <h3>Respaldo automático en servidores propios</h3>
+          <p>Tus datos se sincronizan con infraestructura privada. Cambiá de dispositivo o reinstalá, todo sigue exactamente igual. Seguridad y disponibilidad total.</p>
+        </div>
+        <div class="feature-card animate delay-3">
+          <div class="feature-icon"><i class="fas fa-user-shield"></i></div>
+          <h3>Control de acceso</h3>
+          <p>Inicio de sesión con Google o email. Sistema de tokens de suscripción para autorizar quién usa la herramienta. Tus datos están blindados.</p>
+        </div>
+        <div class="feature-card animate delay-3">
+          <div class="feature-icon"><i class="fas fa-file-upload"></i></div>
+          <h3>Carga masiva por texto</h3>
+          <p>Volcá muchas cuentas de una sola vez pegando texto estructurado. La app reconoce automáticamente campos como mail, contraseña, perfil, proveedor y fecha.</p>
+        </div>
+        <div class="feature-card animate delay-3">
+          <div class="feature-icon"><i class="fas fa-mobile-alt"></i></div>
+          <h3>Modo offline total</h3>
+          <p>Trabajá sin internet. Los cambios se guardan localmente y se sincronizan cuando vuelve la conexión. Ideal para cuando estás en la calle.</p>
+        </div>
+        <div class="feature-card animate delay-3">
+          <div class="feature-icon"><i class="fas fa-lock"></i></div>
+          <h3>Modo kiosko y restricciones</h3>
+          <p>Activá el modo kiosko para deshabilitar edición y borrado. Ideal si compartís pantalla con clientes o empleados.</p>
+        </div>
+        <div class="feature-card animate delay-3">
+          <div class="feature-icon"><i class="fas fa-font"></i></div>
+          <h3>Tamaño de fuente ajustable</h3>
+          <p>Personalizá el tamaño de letra para mayor comodidad visual. Pensado para usarla tanto en celular como en tablet.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECCIÓN: TABLA COMPARATIVA -->
+  <section class="section" style="padding-top:2rem;">
+    <div class="container">
+      <div class="section-header animate">
+        <h2>StreamFlow Pro <span class="gradient-text">vs</span> el resto</h2>
+        <p>La diferencia es clara. Comprobá por qué somos la opción más completa.</p>
+      </div>
+      <div style="overflow-x:auto;" class="animate delay-1">
+        <table class="comparison-table">
+          <thead>
+            <tr>
+              <th>Funcionalidad</th>
+              <th>Excel / Google Sheets</th>
+              <th>Apps genéricas</th>
+              <th style="color:#f5af19;">StreamFlow Pro</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Gestión masiva (+10.000 perfiles)</td>
+              <td><i class="fas fa-times"></i></td>
+              <td><i class="fas fa-check"></i></td>
+              <td><i class="fas fa-check"></i></td>
+            </tr>
+            <tr>
+              <td>Alertas de vencimiento configurables</td>
+              <td><i class="fas fa-times"></i></td>
+              <td><i class="fas fa-times"></i></td>
+              <td><i class="fas fa-check"></i></td>
+            </tr>
+            <tr>
+              <td>Plantillas WhatsApp con un clic</td>
+              <td><i class="fas fa-times"></i></td>
+              <td><i class="fas fa-check"></i></td>
+              <td><i class="fas fa-check"></i></td>
+            </tr>
+            <tr>
+              <td>Dashboard financiero en tiempo real</td>
+              <td><i class="fas fa-times"></i></td>
+              <td><i class="fas fa-times"></i></td>
+              <td><i class="fas fa-check"></i></td>
+            </tr>
+            <tr>
+              <td>Sincronización en servidores propios</td>
+              <td><i class="fas fa-times"></i></td>
+              <td><i class="fas fa-check"></i></td>
+              <td><i class="fas fa-check"></i></td>
+            </tr>
+            <tr>
+              <td>Protección legal Ley 11.723 / GDPR / Leyes Locales</td>
+              <td><i class="fas fa-times"></i></td>
+              <td><i class="fas fa-times"></i></td>
+              <td><i class="fas fa-check"></i></td>
+            </tr>
+            <tr>
+              <td>Soporte directo por WhatsApp</td>
+              <td>-</td>
+              <td><i class="fas fa-times"></i></td>
+              <td><i class="fas fa-check"></i></td>
+            </tr>
+            <tr>
+              <td>Precio mensual</td>
+              <td>Gratis (caótico)</td>
+              <td>$5 - $15</td>
+              <td style="color:#f5af19; font-weight:800;">$10 (todo incluido)</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECCIÓN: PROTECCIÓN LEGAL Y CONFIANZA -->
+  <section class="section" style="padding-top:2rem;">
+    <div class="container">
+      <div class="section-header animate">
+        <h2>Tu información <span class="gradient-text">protegida por ley</span></h2>
+        <p>Porque sabemos que manejás datos sensibles. StreamFlow Pro cumple con las normativas más exigentes de Latinoamérica y Europa.</p>
+      </div>
+      <div class="legal-badge-section animate delay-1">
+        <div class="legal-badge-item">
+          <i class="fas fa-gavel"></i>
+          <span><strong>Ley 11.723</strong> – Propiedad Intelectual Argentina</span>
+        </div>
+        <div class="legal-badge-item">
+          <i class="fas fa-shield-alt"></i>
+          <span><strong>Ley 25.326</strong> – Protección de Datos Personales</span>
+        </div>
+        <div class="legal-badge-item">
+          <i class="fas fa-globe-americas"></i>
+          <span><strong>GDPR</strong> – Reglamento Europeo</span>
+        </div>
+        <div class="legal-badge-item">
+          <i class="fas fa-file-contract"></i>
+          <span><strong>Ley Federal (México)</strong> – Protección de Datos</span>
+        </div>
+        <div class="legal-badge-item">
+          <i class="fas fa-balance-scale"></i>
+          <span><strong>Ley 1581 (Colombia)</strong> – Datos Personales</span>
+        </div>
+        <div class="legal-badge-item">
+          <i class="fas fa-certificate"></i>
+          <span><strong>ISO 9001 / ISO 25010</strong> – Calidad</span>
+        </div>
+      </div>
+      <p style="text-align:center; margin-top:2rem; font-size:0.9rem; opacity:0.8;">
+        Código protegido, transmisiones cifradas. Respetamos la legislación de Argentina, México, Colombia y estándares internacionales.
+      </p>
+    </div>
+  </section>
+
+  <!-- SECCIÓN: CASOS DE USO -->
+  <section class="section" style="padding-top:2rem;">
+    <div class="container">
+      <div class="section-header animate">
+        <h2>Resultados <span class="gradient-text">reales</span> de nuestros usuarios</h2>
+        <p>Vendedores como vos ya transformaron su negocio.</p>
+      </div>
+      <div class="cases-grid animate delay-1">
+        <div class="case-card">
+          <div class="case-icon"><i class="fas fa-clock"></i></div>
+          <h3>80% menos tiempo en envíos</h3>
+          <p>Un vendedor con 400 cuentas redujo drásticamente el tiempo de mensajes. Ahora se enfoca en captar nuevos clientes.</p>
+        </div>
+        <div class="case-card">
+          <div class="case-icon"><i class="fas fa-calendar-check"></i></div>
+          <h3>0 renovaciones perdidas</h3>
+          <p>Gracias a las alertas, la tasa de renovación subió un 40%. Nunca más un cliente insatisfecho por un vencimiento.</p>
+        </div>
+        <div class="case-card">
+          <div class="case-icon"><i class="fas fa-chart-line"></i></div>
+          <h3>Ganancias mensuales +25%</h3>
+          <p>Al ver las métricas, reorganizó sus plataformas más rentables y aumentó sus ingresos en un trimestre.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECCIÓN: PRECIOS -->
+  <section class="section" style="padding-top:2rem;">
+    <div class="container">
+      <div class="section-header animate">
+        <h2>Empeza <span class="gradient-text">gratis</span>, sin trampas</h2>
+        <p>Probá todas las funciones durante 3 días. Sin tarjeta de crédito.</p>
+      </div>
+      <div class="pricing-wrapper animate delay-1">
+        <div class="pricing-card">
+          <div class="discount-badge">3 DÍAS GRATIS</div>
+          <h3>Plan Profesional</h3>
+          <div class="price">$10<small>/mes</small></div>
+          <p style="margin-bottom:1.5rem;">Acceso ilimitado, soporte prioritario y todas las funciones.</p>
+          <ul>
+            <li><i class="fas fa-check-circle"></i> Gestión ilimitada (más de 10.000 perfiles)</li>
+            <li><i class="fas fa-check-circle"></i> Plantillas WhatsApp personalizables</li>
+            <li><i class="fas fa-check-circle"></i> Dashboard de métricas avanzadas</li>
+            <li><i class="fas fa-check-circle"></i> Sincronización en servidores privados</li>
+            <li><i class="fas fa-check-circle"></i> Protección legal conforme a la ley</li>
+            <li><i class="fas fa-check-circle"></i> Soporte directo por WhatsApp</li>
+            <li><i class="fas fa-check-circle"></i> Actualizaciones constantes</li>
+          </ul>
+          <a href="/app/" class="btn btn-primary" style="width:100%;justify-content:center;"><i class="fas fa-rocket"></i> Probar ahora gratis</a>
+          <p style="font-size:0.75rem; margin-top:1rem; opacity:0.6;">Cancelá cuando quieras. Sin permanencia.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECCIÓN: FAQ -->
+  <section class="section" style="padding-top:2rem;">
+    <div class="container">
+      <div class="section-header animate">
+        <h2>Preguntas <span class="gradient-text">frecuentes</span></h2>
+      </div>
+      <div style="max-width:700px; margin:0 auto;">
+        <div style="border-bottom:1px solid rgba(255,255,255,0.1); padding:1.2rem 0;">
+          <strong>¿Cómo empiezo?</strong>
+          <p style="opacity:0.8; margin-top:0.3rem;">Registrate con Google o email y tenés 3 días de prueba gratis con todo desbloqueado.</p>
+        </div>
+        <div style="border-bottom:1px solid rgba(255,255,255,0.1); padding:1.2rem 0;">
+          <strong>¿Cómo pago después?</strong>
+          <p style="opacity:0.8; margin-top:0.3rem;">Contactanos por WhatsApp, te damos un token de 30 días y lo ingresás en la app. Sin datos bancarios.</p>
+        </div>
+        <div style="border-bottom:1px solid rgba(255,255,255,0.1); padding:1.2rem 0;">
+          <strong>¿Mis datos están seguros?</strong>
+          <p style="opacity:0.8; margin-top:0.3rem;">Infraestructura privada con cifrado de extremo a extremo. Cumplimos con la Ley 25.326, Ley Federal de México, Ley 1581 de Colombia y GDPR.</p>
+        </div>
+        <div style="padding:1.2rem 0;">
+          <strong>¿Funciona sin internet?</strong>
+          <p style="opacity:0.8; margin-top:0.3rem;">Sí, completamente offline. Se sincroniza cuando vuelve la conexión.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA FINAL -->
+  <section class="cta-section animate">
+    <div class="container">
+      <h2>Dejá de perder ventas por desorden</h2>
+      <p style="font-size:1.1rem;">StreamFlow Pro es la herramienta que necesitás para vender más, mejor y sin estrés. Probala gratis 3 días.</p>
+      <div style="display:flex; flex-wrap:wrap; gap:1rem; justify-content:center; margin-top:1.5rem;">
+        <a href="/app/" class="btn"><i class="fas fa-rocket"></i> Probar ahora gratis</a>
+        <a href="/app/" class="btn" style="background:transparent; border:2px solid #fff;"><i class="fas fa-laptop"></i> Versión Web</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <p>© 2026 <strong>La Clave Argentina</strong> & <strong>Tienda SSH</strong>. Todos los derechos reservados.</p>
+      <p style="margin-top:0.5rem;">
+        <a onclick="abrirModal('modalPrivacidad')">Política de Privacidad</a> · 
+        <a onclick="abrirModal('modalTerminos')">Términos de Servicio</a>
+      </p>
+      <p style="margin-top:0.5rem; font-size:0.7rem;">
+        Protegido bajo Ley 11.723 (Propiedad Intelectual Argentina), Ley 25.326 (Protección de Datos Personales), Ley Federal de Protección de Datos Personales en Posesión de los Particulares (México), Ley 1581 de 2012 (Colombia), GDPR, ISO 9001 e ISO 25010.
+      </p>
+    </div>
+  </footer>
+
+  <!-- MODAL: QUIÉNES SOMOS -->
+  <div class="modal-overlay" id="modalQuienes">
+    <div class="modal-content">
+      <button class="modal-close" onclick="cerrarModal('modalQuienes')"><i class="fas fa-times"></i></button>
+      <h2><i class="fas fa-users"></i> Nuestra historia</h2>
+      <p><strong>La Clave Argentina</strong> nació como consultora digital para emprendedores. Durante años ayudó a vendedores de streaming a organizar sus carteras, pero siempre faltaba una herramienta unificada.</p>
+      <p><strong>Tienda SSH</strong> se especializaba en venta de productos digitales y administración de cuentas. Sus clientes necesitaban controlar vencimientos y enviar WhatsApp sin perder tiempo.</p>
+      <p>En 2024 unimos fuerzas. Así nació <strong>StreamFlow Pro</strong>, combinando desarrollo de primer nivel con conocimiento real del mercado. Hoy acompañamos a vendedores de México, Argentina, Colombia, Chile, Perú y toda Latinoamérica.</p>
+      <div style="display:flex; justify-content:center; gap:2rem; margin:1.5rem 0; flex-wrap:wrap;">
+        <div style="text-align:center;"><span style="font-size:2rem;">🔐</span><br><strong>La Clave Argentina</strong><br><span style="font-size:0.8rem; opacity:0.6;">Soluciones digitales</span></div>
+        <div style="text-align:center;"><span style="font-size:2rem;">🛒</span><br><strong>Tienda SSH</strong><br><span style="font-size:0.8rem; opacity:0.6;">Ventas digitales</span></div>
+      </div>
+      <p style="text-align:center;"><i class="fas fa-globe-americas"></i> <strong>Presente en todo Latinoamérica</strong></p>
+    </div>
+  </div>
+
+  <!-- MODAL: POLÍTICA DE PRIVACIDAD (con detalles legales) -->
+  <div class="modal-overlay" id="modalPrivacidad">
+    <div class="modal-content">
+      <button class="modal-close" onclick="cerrarModal('modalPrivacidad')"><i class="fas fa-times"></i></button>
+      <h2><i class="fas fa-shield-alt"></i> Política de Privacidad</h2>
+      <p><strong>Última actualización:</strong> Mayo 2026</p>
+      <p>En <strong>StreamFlow Pro</strong> (desarrollado por La Clave Argentina & Tienda SSH), respetamos la privacidad de tus datos conforme a la <strong>Ley 25.326</strong> de Protección de Datos Personales de Argentina, la <strong>Ley Federal de Protección de Datos Personales en Posesión de los Particulares</strong> de México, la <strong>Ley 1581 de 2012</strong> de Colombia y el <strong>GDPR</strong> de la Unión Europea.</p>
+      <h3>1. Información recopilada</h3>
+      <ul>
+        <li><strong>Datos de cuenta:</strong> correo electrónico y/o cuenta de Google para autenticación.</li>
+        <li><strong>Datos de perfiles:</strong> información de cuentas de streaming que vos cargás (plataforma, correo, contraseña, fechas, etc.).</li>
+        <li><strong>Datos de ventas:</strong> registros de transacciones hechas por vos.</li>
+      </ul>
+      <h3>2. Uso de la información</h3>
+      <p>Tus datos son utilizados exclusivamente para brindar el servicio. <strong>No compartimos, vendemos ni cedemos información a terceros.</strong></p>
+      <h3>3. Almacenamiento y seguridad</h3>
+      <p>Toda la información se almacena en servidores privados con cifrado de extremo a extremo, cumpliendo estándares ISO 27001 y medidas técnicas acordes a la Ley 25.326 y leyes locales.</p>
+      <h3>4. Derechos del titular</h3>
+      <p>Podés solicitar el acceso, rectificación o supresión de tus datos en cualquier momento comunicándote por WhatsApp. Respondemos en un plazo máximo de 48 horas.</p>
+      <h3>5. Contacto</h3>
+      <p>Para ejercer tus derechos o consultas, escribinos a nuestro WhatsApp de soporte.</p>
+    </div>
+  </div>
+
+  <!-- MODAL: TÉRMINOS DE SERVICIO (con protección legal) -->
+  <div class="modal-overlay" id="modalTerminos">
+    <div class="modal-content">
+      <button class="modal-close" onclick="cerrarModal('modalTerminos')"><i class="fas fa-times"></i></button>
+      <h2><i class="fas fa-file-contract"></i> Términos de Servicio</h2>
+      <p><strong>Última actualización:</strong> Mayo 2026</p>
+      <h3>1. Aceptación</h3>
+      <p>Al usar StreamFlow Pro aceptás estos términos. El software está protegido por la <strong>Ley 11.723</strong> de Propiedad Intelectual (Argentina) y tratados internacionales de copyright.</p>
+      <h3>2. Descripción del servicio</h3>
+      <p>Herramienta SaaS de gestión de streaming, automatización WhatsApp y métricas. Período de prueba gratuito de 3 días, luego suscripción mensual de $10 USD. No se requiere tarjeta de crédito.</p>
+      <h3>3. Responsabilidades del usuario</h3>
+      <p>Mantener la confidencialidad de las credenciales. No compartir la cuenta ni intentar ingeniería inversa sobre el código.</p>
+      <h3>4. Pagos</h3>
+      <p>La suscripción se gestiona mediante token vía WhatsApp. Sin cargos automáticos.</p>
+      <h3>5. Uso aceptable</h3>
+      <p>No se permite el uso ilícito, la redistribución no autorizada ni la violación de los derechos de autor.</p>
+      <h3>6. Limitación de responsabilidad</h3>
+      <p>StreamFlow Pro se ofrece "tal cual". Cumplimos con los estándares ISO 9001 e ISO 25010 para calidad de software y hacemos lo posible por garantizar su disponibilidad.</p>
+    </div>
+  </div>
+
+  <!-- BOTÓN FLOTANTE WHATSAPP (con tu número real) -->
+  <a href="https://wa.me/5492291530515" target="_blank" class="whatsapp-float" title="Contactar por WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+  <!-- SCRIPTS -->
+  <script>
+    const animatedElements = document.querySelectorAll('.animate');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.animationPlayState = 'running';
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold:0.15 });
+    animatedElements.forEach(el => observer.observe(el));
+
+    function abrirModal(id) {
+      document.getElementById(id).classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+    function cerrarModal(id) {
+      document.getElementById(id).classList.remove('active');
+      document.body.style.overflow = '';
+    }
+    document.querySelectorAll('.modal-overlay').forEach(overlay => {
+      overlay.addEventListener('click', function(e) {
+        if (e.target === this) {
+          this.classList.remove('active');
+          document.body.style.overflow = '';
+        }
+      });
+    });
+  </script>
+</body>
+  </html>
