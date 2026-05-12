@@ -5,23 +5,26 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="theme-color" content="#0f0c29">
   
-  <meta name="description" content="StreamFlow Pro es la herramienta definitiva para vendedores de streaming en Latinoamérica. Administra más de 10.000 cuentas, automatiza ventas por WhatsApp y olvídate del caos. Prueba gratuita de 3 días.">
-  <meta name="keywords" content="gestión de streaming, vender cuentas de streaming, administrador de perfiles, Netflix, Disney Plus, HBO Max, WhatsApp automatizado, vendedores de streaming Latinoamérica, StreamFlow Pro">
+  <!-- SEO optimizado -->
+  <meta name="description" content="StreamFlow Pro es la herramienta definitiva para vendedores de streaming en Latinoamérica. Sin anuncios, gestioná más de 10.000 cuentas, automatizá ventas por WhatsApp y olvídate del caos. Prueba gratuita de 3 días.">
+  <meta name="keywords" content="gestión de streaming, vender cuentas de streaming, administrador de perfiles, Netflix, Disney Plus, HBO Max, WhatsApp automatizado, vendedores de streaming Latinoamérica, StreamFlow Pro, software de gestión de cuentas, herramienta para vendedores, renovaciones automáticas, plantillas WhatsApp, métricas de ventas, sin anuncios, modo offline">
   <meta name="author" content="La Clave Argentina & Tienda SSH">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://streammanagerpro.vercel.app/">
   
+  <!-- Open Graph -->
   <meta property="og:title" content="StreamFlow Pro - Gestión profesional de streaming para Latinoamérica">
-  <meta property="og:description" content="Plataforma segura y conforme a la ley. Administrá más de 10.000 perfiles, automatizá WhatsApp y controlá tus métricas. Probá gratis.">
+  <meta property="og:description" content="Plataforma segura y conforme a la ley. Administrá más de 10.000 perfiles, automatizá WhatsApp y controlá tus métricas. Sin anuncios. Probá gratis.">
   <meta property="og:image" content="https://streammanagerpro.vercel.app/og-image.png">
   <meta property="og:url" content="https://streammanagerpro.vercel.app/">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="StreamFlow Pro">
   <meta property="og:locale" content="es_AR">
   
+  <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="StreamFlow Pro - Deja de improvisar, empieza a vender">
-  <meta name="twitter:description" content="Cumplí con la ley, protegé tus datos. Herramienta para vendedores de streaming en Latinoamérica con automatización WhatsApp y dashboard.">
+  <meta name="twitter:description" content="Herramienta para vendedores de streaming en Latinoamérica. Sin anuncios, con automatización WhatsApp y dashboard.">
   <meta name="twitter:image" content="https://streammanagerpro.vercel.app/og-image.png">
   
   <title>StreamFlow Pro | Gestión profesional de streaming para Latinoamérica</title>
@@ -38,7 +41,7 @@
       "name": "StreamFlow Pro",
       "operatingSystem": "Web, Android, iOS",
       "applicationCategory": "BusinessApplication",
-      "description": "Herramienta profesional para gestión de cuentas de streaming, automatización de WhatsApp y métricas en tiempo real para vendedores de Latinoamérica.",
+      "description": "Herramienta profesional para gestión de cuentas de streaming, automatización de WhatsApp y métricas en tiempo real para vendedores de Latinoamérica. Sin anuncios.",
       "offers": {
         "@type": "Offer",
         "price": "10.00",
@@ -48,7 +51,9 @@
       "author": {
         "@type": "Organization",
         "name": "La Clave Argentina & Tienda SSH",
-        "url": "https://streammanagerpro.vercel.app"
+        "url": "https://streammanagerpro.vercel.app",
+        "address": { "@type": "PostalAddress", "addressLocality": "Buenos Aires", "addressCountry": "AR" },
+        "areaServed": { "@type": "Continent", "name": "Latin America" }
       }
     }
   </script>
@@ -157,7 +162,7 @@
     /* ========== HERO ========== */
     .hero {
       position:relative; min-height:100vh; display:flex; align-items:center; justify-content:center;
-      overflow:hidden; padding:6rem 0 4rem; /* menos padding-top que antes */
+      overflow:hidden; padding:6rem 0 4rem;
       background: radial-gradient(ellipse at 20% 50%, rgba(48,43,99,0.9) 0%, transparent 60%),
                   radial-gradient(ellipse at 80% 20%, rgba(36,36,62,0.95) 0%, transparent 50%);
     }
@@ -336,7 +341,7 @@
     .pricing-wrapper { display:flex; justify-content:center; margin-top:2rem; }
     .pricing-card {
       background:linear-gradient(160deg,#1a154b,#0f0c29); border:2px solid #f5af19;
-      border-radius:2.5rem; padding:2.5rem; max-width:420px; width:100%; text-align:center;
+      border-radius:2.5rem; padding:2.5rem; max-width:450px; width:100%; text-align:center;
       position:relative; box-shadow:0 30px 50px rgba(0,0,0,0.5);
     }
     .pricing-card .discount-badge {
@@ -357,19 +362,52 @@
     }
     .pricing-card ul li i.fa-check-circle { color:#34d399; margin-right:0.6rem; }
 
-    /* ========== CASOS DE USO ========== */
-    .cases-grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(250px, 1fr)); gap:2rem; margin-top:2rem; }
-    .case-card {
-      background:rgba(255,255,255,0.03); border:1px solid rgba(255,255,255,0.08);
-      border-radius:1.5rem; padding:2rem; backdrop-filter:blur(8px); text-align:center;
+    /* ========== TARJETA DE CONTACTO (ESCRITORIO) ========== */
+    .contact-card {
+      background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.1);
+      border-radius:1.5rem; padding:2rem; max-width:500px; margin:2rem auto 0;
+      display:flex; flex-wrap:wrap; gap:1.5rem; justify-content:center; align-items:center;
     }
-    .case-card .case-icon {
-      font-size:2.3rem; margin-bottom:1rem;
+    .contact-item {
+      display:flex; align-items:center; gap:0.6rem; font-size:1rem; font-weight:600;
+    }
+    .contact-item i { font-size:1.3rem; color:#f5af19; }
+    .contact-item span { user-select:all; }
+
+    /* ========== TESTIMONIOS ========== */
+    .testimonial-grid {
+      display:grid;
+      grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));
+      gap:2rem;
+      margin-top:2rem;
+    }
+    .testimonial-card {
+      background:rgba(255,255,255,0.03);
+      border:1px solid rgba(255,255,255,0.08);
+      border-radius:1.5rem;
+      padding:2rem;
+      backdrop-filter:blur(8px);
+    }
+    .testimonial-card .quote {
+      font-style:italic;
+      font-size:0.95rem;
+      margin-bottom:1rem;
+      opacity:0.85;
+    }
+    .testimonial-card .author {
+      display:flex;
+      align-items:center;
+      gap:0.8rem;
+    }
+    .testimonial-card .author-avatar {
+      width:45px; height:45px;
       background:linear-gradient(135deg,#f5af19,#f12711);
-      -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text;
+      border-radius:50%;
+      display:flex; align-items:center; justify-content:center;
+      font-weight:800;
     }
-    .case-card h3 { font-size:1.2rem; margin-bottom:0.5rem; }
-    .case-card p { opacity:0.8; font-size:0.9rem; }
+    .testimonial-card .author-info strong { display:block; font-size:0.9rem; }
+    .testimonial-card .author-info span { font-size:0.75rem; opacity:0.6; }
 
     /* ========== CTA FINAL ========== */
     .cta-section { background:linear-gradient(135deg,#f5af19,#f12711); padding:4rem 0; text-align:center; }
@@ -412,11 +450,11 @@
 
     /* ========== VOLVER ARRIBA ========== */
     .scroll-to-top {
-      position:fixed; bottom:145px; right:25px;
-      background:rgba(15,12,41,0.85); backdrop-filter:blur(8px);
-      border:1px solid rgba(255,255,255,0.2); border-radius:50%;
-      width:50px; height:50px; display:flex; align-items:center; justify-content:center;
-      font-size:1.2rem; color:#fff; z-index:997;
+      position:fixed; bottom:25px; left:25px;
+      background:rgba(15,12,41,0.7); backdrop-filter:blur(8px);
+      border:1px solid rgba(255,255,255,0.15); border-radius:50%;
+      width:44px; height:44px; display:flex; align-items:center; justify-content:center;
+      font-size:1.1rem; color:#fff; z-index:997;
       opacity:0; transform:translateY(20px); pointer-events:none;
       transition:opacity 0.3s, transform 0.3s;
     }
@@ -458,13 +496,14 @@
       .footer-brand { justify-content:center; }
       .mid-cta { margin-top: 1rem; padding: 2rem 1rem; }
       .floating-buttons { right:15px; bottom:15px; }
-      .scroll-to-top { bottom:120px; right:15px; }
+      .scroll-to-top { left:15px; bottom:15px; }
       .section { padding: 3.5rem 0; }
       .hero { padding-top: 5rem; }
+      .contact-card { flex-direction:column; text-align:center; }
     }
     @media (min-width:1024px) {
       .features-grid, .advantage-grid { grid-template-columns:repeat(3, 1fr); }
-      .cases-grid { grid-template-columns:repeat(3, 1fr); }
+      .testimonial-grid { grid-template-columns:repeat(3, 1fr); }
     }
   </style>
 </head>
@@ -687,17 +726,44 @@
     </div>
   </section>
 
-  <!-- CASOS DE USO -->
+  <!-- TESTIMONIOS -->
   <section class="section" style="padding-top:2rem;">
     <div class="container">
       <div class="section-header animate">
-        <h2>Resultados <span class="gradient-text">reales</span></h2>
-        <p>Vendedores como vos ya transformaron su negocio.</p>
+        <h2>Lo que dicen <span class="gradient-text">nuestros usuarios</span></h2>
+        <p>Vendedores reales que ya transformaron su negocio con StreamFlow Pro.</p>
       </div>
-      <div class="cases-grid animate delay-1">
-        <div class="case-card"><div class="case-icon"><i class="fas fa-clock"></i></div><h3>80% menos tiempo</h3><p>Un vendedor con 400 cuentas redujo drásticamente el tiempo de envío de mensajes.</p></div>
-        <div class="case-card"><div class="case-icon"><i class="fas fa-calendar-check"></i></div><h3>0 renovaciones perdidas</h3><p>Con alertas, la tasa de renovación subió un 40%.</p></div>
-        <div class="case-card"><div class="case-icon"><i class="fas fa-chart-line"></i></div><h3>+25% ganancias</h3><p>Al ver las métricas, reorganizó sus plataformas más rentables.</p></div>
+      <div class="testimonial-grid animate delay-1">
+        <div class="testimonial-card">
+          <div class="quote">"Antes perdía horas copiando y pegando mensajes. Ahora con dos clics el cliente recibe todo. Vendí un 40% más este mes."</div>
+          <div class="author">
+            <div class="author-avatar">M</div>
+            <div class="author-info">
+              <strong>Mariano G.</strong>
+              <span>Vendedor de streaming hace 3 años</span>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="quote">"Los vencimientos eran mi pesadilla. Ahora entro, veo los próximos y renuevo al toque. No perdí un cliente más."</div>
+          <div class="author">
+            <div class="author-avatar">C</div>
+            <div class="author-info">
+              <strong>Carolina L.</strong>
+              <span>Administradora de cuentas</span>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="quote">"Lo que más me gusta es el dashboard. Sé exactamente cuánto facturo cada día. Mi negocio ahora es profesional."</div>
+          <div class="author">
+            <div class="author-avatar">J</div>
+            <div class="author-info">
+              <strong>Javier R.</strong>
+              <span>Emprendedor digital</span>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -714,16 +780,34 @@
           <div class="discount-badge">3 DÍAS GRATIS</div>
           <h3>Plan Profesional</h3>
           <div class="price">USD 10<small>/mes</small></div>
+          <p style="margin-bottom:1.5rem; opacity:0.85;">Todo incluido. Sin costos ocultos. Cancelá cuando quieras.</p>
           <ul>
             <li><i class="fas fa-check-circle"></i> Gestión ilimitada (+10.000 perfiles)</li>
-            <li><i class="fas fa-check-circle"></i> Plantillas WhatsApp</li>
-            <li><i class="fas fa-check-circle"></i> Dashboard financiero</li>
-            <li><i class="fas fa-check-circle"></i> Sincronización privada</li>
-            <li><i class="fas fa-check-circle"></i> Protección legal</li>
-            <li><i class="fas fa-check-circle"></i> Soporte WhatsApp</li>
+            <li><i class="fas fa-check-circle"></i> <strong>Sin anuncios</strong></li>
+            <li><i class="fas fa-check-circle"></i> Plantillas WhatsApp personalizables</li>
+            <li><i class="fas fa-check-circle"></i> Dashboard de métricas avanzadas</li>
+            <li><i class="fas fa-check-circle"></i> Sincronización en servidores privados</li>
+            <li><i class="fas fa-check-circle"></i> <strong>Carga masiva por texto</strong></li>
+            <li><i class="fas fa-check-circle"></i> <strong>Modo offline total</strong></li>
+            <li><i class="fas fa-check-circle"></i> <strong>Modo kiosko y restricciones</strong></li>
+            <li><i class="fas fa-check-circle"></i> <strong>Alertas de vencimiento configurables</strong></li>
+            <li><i class="fas fa-check-circle"></i> Protección legal conforme a la ley</li>
+            <li><i class="fas fa-check-circle"></i> <strong>Soporte prioritario 24/7</strong></li>
+            <li><i class="fas fa-check-circle"></i> Actualizaciones constantes</li>
           </ul>
           <a href="/app/" class="btn btn-primary" style="width:100%;justify-content:center;"><i class="fas fa-rocket"></i> Probar ahora gratis</a>
           <p style="font-size:0.75rem; margin-top:1rem; opacity:0.6;">Cancelá cuando quieras. Sin permanencia.</p>
+        </div>
+      </div>
+      <!-- Tarjeta de contacto para escritorio -->
+      <div class="contact-card animate delay-2">
+        <div class="contact-item">
+          <i class="fab fa-whatsapp"></i>
+          <span>+54 9 2291 53-0515</span>
+        </div>
+        <div class="contact-item">
+          <i class="fas fa-envelope"></i>
+          <span>soportesfpro@gmail.com</span>
         </div>
       </div>
     </div>
@@ -751,6 +835,14 @@
         <div class="step-card">
           <h3>¿Funciona sin internet?</h3>
           <p>Sí, completamente offline. Se sincroniza cuando vuelve la conexión.</p>
+        </div>
+        <div class="step-card">
+          <h3>¿Puedo usar la app en varios dispositivos?</h3>
+          <p>Sí. Tus datos se sincronizan en la nube. Podés acceder desde tu celular, tablet o computadora sin perder información.</p>
+        </div>
+        <div class="step-card">
+          <h3>¿Qué pasa si no renuevo a tiempo?</h3>
+          <p>Tus datos no se borran. Si tu suscripción vence, el acceso a la app se limita hasta que ingreses un nuevo token. Podés contactarnos en cualquier momento para renovar y recuperar todas tus funcionalidades al instante.</p>
         </div>
       </div>
     </div>
@@ -826,6 +918,7 @@
     <div class="modal-content">
       <button class="modal-close" onclick="cerrarModal('modalPrivacidad')"><i class="fas fa-times"></i></button>
       <h2><i class="fas fa-shield-alt"></i> Política de Privacidad</h2>
+      <p><strong>Última actualización:</strong> Mayo 2026</p>
       <p>En StreamFlow Pro respetamos tu privacidad conforme a la Ley 25.326 (Argentina), Ley Federal de Protección de Datos (México), Ley 1581 (Colombia) y GDPR.</p>
       <h3>1. Información recopilada</h3>
       <ul><li>Datos de cuenta (correo, Google).</li><li>Datos de perfiles y ventas cargados por vos.</li></ul>
@@ -840,6 +933,7 @@
     <div class="modal-content">
       <button class="modal-close" onclick="cerrarModal('modalTerminos')"><i class="fas fa-times"></i></button>
       <h2><i class="fas fa-file-contract"></i> Términos de Servicio</h2>
+      <p><strong>Última actualización:</strong> Mayo 2026</p>
       <p>Al usar StreamFlow Pro aceptás estos términos. Software protegido por Ley 11.723 de Propiedad Intelectual.</p>
       <h3>1. Servicio</h3><p>SaaS de gestión de streaming con prueba gratuita de 3 días y suscripción mensual de USD 10.</p>
       <h3>2. Pagos</h3><p>Vía token por WhatsApp. Sin cargos automáticos.</p>
@@ -874,7 +968,7 @@
     </button>
   </div>
 
-  <!-- BOTÓN VOLVER ARRIBA -->
+  <!-- BOTÓN VOLVER ARRIBA (ahora a la izquierda) -->
   <a href="#" class="scroll-to-top" id="scrollToTop" title="Volver arriba">
     <i class="fas fa-arrow-up"></i>
   </a>
